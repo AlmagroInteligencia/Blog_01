@@ -14,10 +14,13 @@
                         <p class="card-text">{{ object.content|truncatechars:25 }}</p>
                         </hr>
                         <p>
-                            <span><i class="fas fa-thumb-up"></i>{{ object.get_like_count }}</span>
+                            <span><i class="fas fa-thumbs-up"></i>{{ object.get_like_count }}</span>
                             <span><i class="fas fa-eye"></i>{{ object.get_viewed_count }}</span>
-                            <span><i class="fas fa-coments"></i>{{ object.get_coment_count }}</span>
-                        </p>    
+                            <span><i class="fas fa-comments"></i>{{ object.get_comment_count }}</span>
+                        </p>  
+                        <p class="card-text">
+                            Posted {{ object.publish_date|timesince }}  ago
+                        </p>  
                     </div>
                 </div>        
             </div>   
